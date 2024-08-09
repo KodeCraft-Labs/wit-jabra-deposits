@@ -1,0 +1,22 @@
+interface types {
+
+    record exchanges-wallet{
+        exchange-name: string,
+        amount: f64,
+        delta: f64,
+        pnl: f64
+    }
+    record exchanges-wallet-response{
+        total-amount: f64,
+        pnl: f64,
+        total-delta: f64,
+        exchanges-wallet: list<exchanges-wallet>
+    }
+
+    record jabra-deposits-response{
+        code: s16,
+        message: string,
+        data: exchanges-wallet-response
+    }
+
+}
