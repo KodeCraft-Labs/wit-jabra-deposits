@@ -6,11 +6,19 @@ interface types {
         delta: f64,
         pnl: f64
     }
+    record collateral-owed{
+        counter-party: string,
+        currency: string,
+        exchange: string,
+        amount: f64,
+        equity-usd: f64,
+    }
     record exchanges-wallet-response{
         total-amount: f64,
         pnl: f64,
         total-delta: f64,
-        exchanges-wallet: list<exchanges-wallet>
+        exchanges-wallet: list<exchanges-wallet>,
+        collateral-owed: list<collateral-owed>,
     }
 
     record jabra-deposits-response{
