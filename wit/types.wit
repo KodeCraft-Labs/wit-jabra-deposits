@@ -19,6 +19,9 @@ interface types {
         total-delta: f64,
         exchanges-wallet: list<exchanges-wallet>,
         collateral-owed: list<collateral-owed>,
+        total-deribit-collateral: f64,
+        total-current-wallet-balances: f64,
+        total-equity-usd: f64,
     }
 
     record jabra-deposits-response{
